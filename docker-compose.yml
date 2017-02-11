@@ -5,6 +5,7 @@ services:
      image: mysql:5.7
      volumes:
        - db_data:/var/lib/mysql
+       - ./dumps:/var/dumps
      restart: always
      environment:
        MYSQL_ROOT_PASSWORD: wordpress
