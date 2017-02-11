@@ -13,6 +13,7 @@
 </html>
 
 <!--
-  <?php echo get_num_queries() ?> SQL queries done.
-  Page generation took <?php echo timer_stop() ?> seconds.
+  Generated <?php echo date('Y-m-d H:i:s') ?>
+  Took <?php echo timer_stop() ?> seconds.
+  Using <?php echo get_num_queries() ?> SQL queries.
 -->

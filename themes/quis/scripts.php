@@ -1,6 +1,6 @@
 <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
 <script src="//maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false&amp;libraries=geometry"></script>
-<script src="/wp-content/themes/quis/js/quis.js?<?php echo filemtime("wp-content/themes/quis/js/quis.js"); ?>"></script>
+<script src="/wp-content/themes/quis/js/quis.js"></script>
 
 <script>
   var _gaq = _gaq || [];
