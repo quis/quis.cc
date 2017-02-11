@@ -13,6 +13,6 @@ serve-static:
 	cd ./static
 	python3 -m http.server 5555
 deploy:
-	aws s3 sync --profile personal --region eu-west-1 ./static s3://www.quis.cc
+	aws s3 sync --profile personal --region eu-west-1 ./static s3://quis.cc
 backup-images:
 	aws s3 sync --profile personal s3://quisimages ./images
