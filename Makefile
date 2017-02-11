@@ -1,6 +1,7 @@
 all: generate deploy
-backup-images:
-	aws s3 sync --profile personal s3://quisimages ./images
+wordpress:
+	docker-compose down
+	docker-compose up -d
 generate:
 	rm -rf static/*
 	wget --mirror -p -nH --directory-prefix=static --html-extension --level=1 http://0.0.0.0:8000/
@@ -13,3 +14,5 @@ serve-static:
 	python3 -m http.server 5555
 deploy:
 	aws s3 sync --profile personal --region eu-west-1 ./static s3://www.quis.cc
+backup-images:
+	aws s3 sync --profile personal s3://quisimages ./images
