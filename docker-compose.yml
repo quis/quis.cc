@@ -23,11 +23,11 @@ services:
        WORDPRESS_DB_HOST: db:3306
        WORDPRESS_DB_PASSWORD: wordpress
      volumes:
-       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
-       - ./themes/quis:/var/www/html/wp-content/themes/quis
-       - ./plugins/wp-no-category-base:/var/www/html/wp-content/plugins/wp-no-category-base
-       - ./plugins/pc-admin-page-ids:/var/www/html/wp-content/plugins/pc-admin-page-ids
-       - ./plugins/google-sitemap-generator:/var/www/html/wp-content/plugins/google-sitemap-generator
-       - ./plugins/qInlineImages.php:/var/www/html/wp-content/plugins/qInlineImages.php
+       - ./source/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+       - ./source/themes/quis:/var/www/html/wp-content/themes/quis
+       - ./source/plugins/wp-no-category-base:/var/www/html/wp-content/plugins/wp-no-category-base
+       - ./source/plugins/pc-admin-page-ids:/var/www/html/wp-content/plugins/pc-admin-page-ids
+       - ./source/plugins/google-sitemap-generator:/var/www/html/wp-content/plugins/google-sitemap-generator
+       - ./source/plugins/qInlineImages.php:/var/www/html/wp-content/plugins/qInlineImages.php
 volumes:
     db_data:
