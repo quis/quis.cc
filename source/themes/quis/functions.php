@@ -133,11 +133,12 @@
 	}
 
 
-	function parent_category_is($parent) {
+	function parent_category_is($slug) {
 
 		$category = get_category(get_query_var("cat"));
+    $categoryFromSlug = get_category_by_slug($slug);
 
-		if ($category->category_parent == $parent) {
+		if ($category->category_parent == $categoryFromSlug->term_id) {
 			return true;
 		}
 

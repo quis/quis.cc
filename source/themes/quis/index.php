@@ -4,7 +4,7 @@
 
 	global $query_string;
 	$query_modifications = is_category() ? "" : "&cat=-308"; // Exclude hidden posts unless on a category page
-	$query_modifications .= parent_category_is(353) ? "&order=ASC" : "";
+	$query_modifications .= parent_category_is("trips") ? "&order=ASC" : "";
 	query_posts($query_string.$query_modifications);
 
 	is_front_page() ? require("nav.php") : null;
