@@ -6,9 +6,10 @@
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 	<head>
 		<title><?php echo $pageMeta["title"]?></title>
+    <meta charset="utf-8">
 		<link rel="stylesheet" href="/wp-content/themes/quis/css/quis.css" type="text/css" />
 		<link rel="alternate" type="application/rss+xml" title="quis.cc RSS feed" href="/feed/" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
