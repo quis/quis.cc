@@ -4,7 +4,7 @@ wordpress:
 	docker-compose up -d
 generate:
 	rm -rf static/*
-	wget --mirror -p -nH --directory-prefix=static --html-extension --level=1 http://0.0.0.0:8000/
+	wget --mirror -p -nH --directory-prefix=static --html-extension http://0.0.0.0:8000/
 	echo "Removing index.html"
 	find ./static -name "*.html" -print0 | xargs -0 sed -i'' -e 's/index.html//g'
 	echo "Removing hostname"
