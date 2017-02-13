@@ -24,6 +24,13 @@
 					);
 				?>
 			</ul>
+      <?php
+        wp_get_archives(
+          array(
+            "type" => "daily"
+          )
+        );
+      ?>
 <?php
 			}
 ?>
