@@ -7,7 +7,7 @@
 	$query_modifications .= parent_category_is("trips") ? "&order=ASC" : "";
 	query_posts($query_string.$query_modifications);
 
-	is_front_page() ? require("nav.php") : null;
+	is_front_page() && !is_paged() ? require("nav.php") : null;
 
 	if (have_posts()) {
 
