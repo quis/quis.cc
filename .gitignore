@@ -1,5 +1,8 @@
 .sass-cache
+source/themes/quis/npm-debug.log
 source/themes/quis/node_modules
+source/themes/quis/css/quis.css
+source/themes/quis/js/quis.js
 images
 static/*
 dumps
