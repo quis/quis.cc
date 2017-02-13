@@ -9,9 +9,6 @@
 
 $(function() {
 
-    $(QUIS.imageSelector)
-      .imageScale();
-
     for (var module in QUIS) {
 
       if (QUIS[module].init) QUIS[module].init();

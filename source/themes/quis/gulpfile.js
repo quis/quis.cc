@@ -13,6 +13,10 @@ gulp.task('js', () => gulp
   .src([
     'js/constants.js',
     'js/rateLimit.js',
+    'js/scrollPages.js',
+    'js/scrollPhotos.js',
+    'js/jquery.infinitescroll.js',
+    'js/jquery.viewportSelector.js',
     'js/map.js',
     'js/init.js',
   ])
