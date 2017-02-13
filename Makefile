@@ -2,13 +2,15 @@ all: generate deploy
 wordpress:
 	docker-compose down
 	docker-compose up -d
-generate:
+mirror:
 	rm -rf static/*
 	wget --mirror -p -nH --directory-prefix=static --level=1000 --html-extension http://localhost:8000/
+postprocess:
 	echo "Removing index.html"
 	find ./static -name "*.html" -print0 | xargs -0 sed -i'' -e 's/index.html//g'
 	echo "Removing hostname"
-	find ./static -name "*.html" -print0 | xargs -0 sed -i'' -e 's/http:\/\/0.0.0.0:8000//g'
+	find ./static -name "*.html" -print0 | xargs -0 sed -i'' -e 's/http:\/\/localhost:8000//g'
+generate: mirror postprocess
 serve-static:
 	cd ./static
 	python3 -m http.server 5555
