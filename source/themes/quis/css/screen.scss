@@ -3,11 +3,13 @@ $highlight: #2863f0;
 $background: #fff;
 $tablet: 800px;
 $mobile: 480px;
-$font-size: 17px;
-$medium-font-size: 15px;
-$small-font-size: 14px;
-$tiny-font-size: 11px;
+$font-size: 23px;
+$medium-font-size: 16px;
+$small-font-size: 16px;
+$tiny-font-size: 16px;
+$line-height: 1.236 * $font-size;
 $easing: cubic-bezier(0.23, 1, 0.32, 1);
+$body-width: 30em;
 
 html {
   background: $background;
@@ -19,12 +21,12 @@ html {
 body {
   margin: 0;
   background: $background;
-  font-family: "Merriweather", serif;
+  font-family: crimson-text, serif;
 }
 
 #photos {
 
-  margin: 10% 0 0 0;
+  margin: 10vh 0 0 0;
 
   @media all and (max-width:$tablet) {
     margin: 6.5em 0 0 0;
@@ -68,30 +70,20 @@ body {
 
 
 h1, h2, h3, h4 {
-  font-size: 1.2em;
-  margin: 0.7em 0 0 0;
   font-weight: normal;
 }
 
 h1 {
 
   display: block;
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: $line-height;
   cursor: pointer;
-  position: fixed;
-  left: -67px;
-  top: -67px;
-  z-index: 15000;
+  position: absolute;
+  left: 0;
+  top: 0;
   background-color: $highlight;
-  transform: rotate(-45deg);
   margin: 0;
-  transition: all .15s ease-out;
-
-  &:hover {
-    left: -50px;
-    top: -50px;
-  }
 
   a {
     display: block;
@@ -109,7 +101,7 @@ ol {
   font-size: $font-size;
   padding: 0;
   margin: 0;
-  line-height: 1.62em;
+  line-height: 1.4em;
 
   @media all and (max-width:$tablet) {
     font-size: $medium-font-size;
@@ -170,13 +162,13 @@ nav {
   box-sizing: border-box;
   height: auto;
   margin: 0 auto;
-  padding: 2.56em 0 20vh;
-  width: 44.1em;
-  font-size: 17px;
+  padding: 0 0 20vh 0;
+  width: $body-width;
+  font-size: $font-size;
 
   @media all and (max-width: 960px) {
     width: auto;
-    padding: 2.56em 16px 20vh;
+    padding: 0 16px 20vh;
   }
 
   h2,
@@ -201,21 +193,25 @@ nav {
   }
 
   h2 {
-    margin-bottom: 2.6em;
+    margin-bottom: $line-height * 1.5;
+  }
+
+  h3 {
+    margin: $line-height / 2 0 0 0;
   }
 
   p {
-    margin-top: 2.6em;
+    margin-top: $line-height * 1.5;
   }
 
   ul {
-    margin: -1.38em 0 1em 4.25em;
+    margin: (-$line-height - 2) 0 0 ($font-size * 4);
     overflow: hidden;
   }
 
   li {
     display: inline-block;
-    margin: 0 0.8em 0 0;
+    margin: 0 $font-size ($font-size / 4) 0;
     list-style: none;
     white-space: nowrap;
   }
@@ -318,7 +314,7 @@ footer {
   blockquote {
 
     text-indent: 0;
-    width: 44.1em;
+    width: $body-width;
 
     @media all and (max-width: 960px) {
       width: auto;
@@ -337,7 +333,7 @@ footer {
   }
 
   p.center {
-    margin-top: 1.618em;
+    margin-top: $line-height;
     text-align: center;
     text-indent: 0;
   }
@@ -355,9 +351,8 @@ footer {
 
   p.meta {
 
-    margin-bottom: 29px;
-    margin-top: 0.62em;
-    text-align: center;
+    margin-bottom: $font-size;
+    margin-top: $font-size / 2;
 
     a {
       background: none;
@@ -399,10 +394,9 @@ footer {
 
     font-style: italic;
     box-sizing: border-box;
-    margin: 0 auto 1em auto;
+    margin: 0 auto $line-height auto;
     padding-left: 3.2em;
     padding-right: 3.2em;
-    margin-bottom: 29px;
 
     @media all and (max-width: $mobile) {
       padding-left: 1.6em;
@@ -411,7 +405,7 @@ footer {
 
     p {
       width: 100%;
-      margin-top: 1.618em;
+      margin-top: $line-height;
     }
 
   }
@@ -426,10 +420,14 @@ footer {
 
   h2 {
 
-    font-size: 2.6em;
+    font-size: $font-size;
     font-weight: normal;
     text-transform: none;
-    text-align: center;
+    text-align: left;
+    font-weight: bold;
+    width: $body-width;
+    margin-left: auto;
+    margin-right: auto;
 
     @media all and (max-width:$mobile) {
       font-size: 1.6em;
@@ -440,8 +438,6 @@ footer {
   & > h2 {
 
     display: inline-block;
-    font-family: "Helvetica Neue", "Arial", "Helvetica", sans-serif;
-    font-weight: bold;
 
     @media all and (max-width:$mobile) {
       border-bottom: 0;
@@ -505,6 +501,7 @@ footer {
       width: auto;
       margin-left: 0;
       margin-right: 0;
+      font-weight: normal;
     }
 
     a {
@@ -532,8 +529,7 @@ footer {
 
   display: block;
   position: relative;
-  margin-bottom: 0;
-  padding-bottom: 2em;
+  margin-bottom: $line-height;
   background: #fff;
 
   @media all and (max-width:$tablet) {
@@ -569,13 +565,15 @@ footer {
 
 .hasTooltip {
 
-  margin-top: 2.6em;
+  margin-top: $line-height * 2;
+  line-height: $line-height;
 
   p,
   h2,
   h3 {
 
     font-size: $small-font-size;
+    font-weight: normal;
     margin: 0 0.62em 0 0;
     width: auto;
     text-align: center;
