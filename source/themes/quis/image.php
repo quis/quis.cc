@@ -67,7 +67,7 @@
                 <p>
                     <?php
                         echo the_category_include(
-                            " &middot; ",
+                            "&emsp;",
                             array(
                               "people",
                               "stunts",
@@ -80,7 +80,7 @@
 	if ($exif != "") {
     if ($legacy == "") {
 ?>
-                    &middot;
+                    &ensp;
                     <time datetime="<?php echo date(DATE_W3C, $timestamp) ?>"><?php echo date("j", $timestamp)?>/<?php echo date("n", $timestamp)?>/<?php echo date("Y", $timestamp)?></time>
 <?php
     }
