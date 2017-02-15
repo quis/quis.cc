@@ -28,7 +28,7 @@ body {
 
   img {
     display: block;
-    margin: 0 auto $line-height auto;
+    margin: 0 auto $font-size-small auto;
     border: none;
     color: #fff;
     clear: both;
@@ -469,9 +469,6 @@ footer {
 
   .hasTooltip {
 
-    padding-top: 2.6em;
-    margin-top: 2em;
-
     @media all and (max-width: $tablet) {
       margin-top: $line-height;
     }
@@ -494,7 +491,7 @@ footer {
   }
 
   .mask {
-    margin-top: 0;
+    margin-top: $line-height * 2;
     z-index: 5000;
   }
 
@@ -555,14 +552,18 @@ footer {
   h2,
   h3 {
     font-size: $font-size-small;
+    line-height: $line-height;
     font-weight: normal;
-    margin: 0 0.62em 0 0;
     width: auto;
     text-align: center;
   }
 
+  h2 {
+    margin: 0;
+  }
+
   p {
-    max-width: 44.1em;
+    max-width: $body-width;
     margin-left: auto;
     margin-right: auto;
   }
