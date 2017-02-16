@@ -103,6 +103,8 @@ a:link,
 a:visited {
   color: $grey;
   text-decoration: none;
+  outline-offset: 3px;
+  outline: 2px solid transparent;
 }
 
 a:hover,
@@ -110,12 +112,12 @@ a:active,
 a:focus {
   color: $highlight;
   outline: 2px solid $highlight;
-  outline-offset: 3px;
+  transition: outline-offset 5s ease-in;
 }
 
 a:active {
-  background: $highlight;
-  color: $background;
+  outline-offset: 10px;
+  transition: all 0.05s ease-in;
 }
 
 h2 a:link,
