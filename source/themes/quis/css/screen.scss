@@ -19,7 +19,7 @@ html {
 body {
   margin: 0;
   background: $background;
-  font-family: crimson-text, serif;
+  font-family: "Tinos", serif;
 }
 
 #photos {
@@ -350,7 +350,7 @@ footer {
     padding: 0;
     line-height: 1.62em;
     margin: 0 auto;
-    width: 44.1em;
+    width: $body-width;
 
     @media all and (max-width: 960px) {
       width: auto;
