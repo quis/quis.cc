@@ -495,6 +495,7 @@ footer {
   .mask {
     margin-top: $line-height * 2;
     z-index: 5000;
+    outline: ($line-height + 1px) solid $background;
   }
 
 }
