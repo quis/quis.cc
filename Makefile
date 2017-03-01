@@ -1,6 +1,7 @@
 all: generate deploy
-wordpress:
+stop:
 	docker-compose down
+wordpress: stop
 	docker-compose up -d
 preprocess:
 	rm -rf static/*
