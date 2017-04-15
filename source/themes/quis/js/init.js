@@ -33,10 +33,6 @@ $(function() {
           donetext: "No more photos",
           callback: function(path, pageID) {
 
-            // size newly-loaded images
-            $("#" + pageID + " " + QUIS.imageSelector)
-              .imageScale();
-
             QUIS.map.renderMap();
 
             if (_gaq) {
