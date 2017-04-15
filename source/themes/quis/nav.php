@@ -1,7 +1,4 @@
 <nav>
-  <h2>
-    Chris Hill-Scott&#8217;s photo blog
-  </h2>
   <h3>
     Trips
   </h3>

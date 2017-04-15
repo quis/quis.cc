@@ -22,7 +22,8 @@
 	<body>
 		<header>
 			<h1>
-				<a title="Home page" href="/">quis.cc is Chris Hill-Scott's photo blog</a>
+        <span><?php echo $pageMeta["menuDescription"] ?></span>
+				<a title="Home page" href="/">Chris Hill-Scott’s photo blog</a>
 			</h1>
     </header>
 		<div id="photos">

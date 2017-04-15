@@ -8,6 +8,8 @@ $font-size-small: 16px;
 $line-height: 1.236 * $font-size;
 $easing: cubic-bezier(0.23, 1, 0.32, 1);
 $body-width: 30em;
+$sans-stack: "Helvetica", "Helvetica Neue", "Arial", sans-serif;
+$serif-stack: "Tinos", serif;
 
 html {
   background: $background;
@@ -19,14 +21,15 @@ html {
 body {
   margin: 0;
   background: $background;
-  font-family: "Tinos", serif;
+  font-family: $serif-stack;
 }
 
 #photos {
 
-  margin: 10vh 0 0 0;
+  margin: $line-height * 3 0 0 0;
 
   img {
+
     display: block;
     margin: 0 auto $font-size-small auto;
     border: none;
@@ -38,6 +41,11 @@ body {
     max-height: 87vh;
     -ms-interpolation-mode: bicubic;
     image-rendering: optimizeQuality;
+
+    @media all and (max-width:$tablet) {
+      max-width: 100%;
+    }
+
   }
 
 }
@@ -65,21 +73,74 @@ h1, h2, h3, h4 {
 
 h1 {
 
-  display: block;
-  width: 100%;
-  height: $line-height;
-  cursor: pointer;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: $highlight;
-  margin: 0;
+  font-family: $sans-stack;
+  font-weight: bold;
+  font-size: $font-size;
+  line-height: $line-height;
 
-  a {
+  @media all and (max-width: $tablet) {
+    margin: $font-size-small;
+  }
+
+  span,
+  a:link,
+  a:visited {
+
     display: block;
+    transform: scaleX(1.1) rotate(-90deg);
+    transform-origin: top right;
+    position: fixed;
+    left: -100%;
+    top: $font-size-small;
     width: 100%;
-    height: 100%;
-    font-size: 1px;
+    text-align: right;
+    z-index: 10000;
+
+    @media all and (max-width: $tablet) {
+      display: inline;
+      position: static;
+      transform-origin: top left;
+      transform: scaleX(0.909);
+      font-size: $font-size-small;
+      text-align: left;
+    }
+
+  }
+
+  span {
+
+    left: auto;
+    right: $font-size;
+    top: auto;
+    bottom: 0;
+    transform: scaleX(1.25) rotate(90deg);
+    transform-origin: right;
+    text-align: right;
+    margin: 0;
+
+    @media all and (max-width: $tablet) {
+      display: none;
+    }
+
+  }
+
+  a:link,
+  a:visited {
+
+    margin: 0 0 0 8px;
+
+    @media all and (max-width: $tablet) {
+      margin: 0;
+      position: absolute;
+      top: $font-size-small;
+      left: $font-size-small;
+    }
+
+  }
+
+  a:hover,
+  a:active {
+    outline: none;
   }
 
 }
@@ -243,8 +304,8 @@ nav {
 
 #infscr-loading {
   position: fixed;
-  bottom: 15px;
-  right: 15px;
+  bottom: $font-size-small;
+  left: $font-size-small;
   z-index: 98;
   padding: 0;
   background: transparent;
@@ -275,13 +336,14 @@ footer {
   .next-link a {
 
     display: block;
+    font-family: $sans-stack;
     font-size: $font-size;
     padding: $line-height;
-    margin: 0 0 $line-height 0;
+    margin: 0 0 $line-height * 3 0;
     box-sizing: border-box;
     background: $highlight;
     color: #fff;
-    text-align: right;
+    text-align: center;
 
     @media all and (max-width:$tablet) {
       font-size: $font-size-small;
@@ -300,13 +362,12 @@ footer {
 
 .blogPost {
 
-  margin: 20vh 0 12.8em 0;
+  margin: $line-height * 4 0 $line-height * 2 0;
   color: $grey;
   text-align: center;
 
   @media all and (max-width: $tablet) {
     width: auto;
-    margin: 0 0 20vh 0;
   }
 
   p,
@@ -457,18 +518,15 @@ footer {
   }
 
   p.intro {
-    font-style: italic;
-    margin-bottom: 34px;
+    margin-bottom: $line-height;
     text-align: center;
   }
 
   blockquote {
 
-    font-style: italic;
-    box-sizing: border-box;
     margin: 0 auto $line-height auto;
-    padding-left: $line-height * 2;
-    padding-right: $line-height * 2;
+    padding-left: $line-height;
+    padding-right: $line-height;
 
     @media all and (max-width: $tablet) {
       padding-left: $line-height;
@@ -476,8 +534,8 @@ footer {
     }
 
     p {
-      width: 100%;
       margin-top: $line-height;
+      max-width: 100%;
     }
 
   }
@@ -492,8 +550,10 @@ footer {
 
   h2 {
 
+    font-family: $sans-stack;
     font-size: $font-size;
-    font-weight: normal;
+    transform: scaleX(0.909);
+    transform-origin: left;
     text-transform: none;
     text-align: left;
     font-weight: bold;
@@ -525,23 +585,23 @@ footer {
   }
 
   .pullquote {
-    font-size: 1.6em;
-    line-height: 1.4em;
+    font-size: $line-height;
+    line-height: $line-height;
     display: block;
     float: left;
-    font-style: italic;
     text-indent: 0;
-    width: 8.7em;
+    width: 50%;
+    font-family: $sans-stack;
   }
 
   .left {
     float: left;
-    margin: 0 1.618em 0.7em 0;
+    margin: $line-height / 2 $line-height $line-height / 2 0;
   }
 
   .right {
     float: right;
-    margin: 0 0 0.7em 1.618em;
+    margin: $line-height / 2 0 $line-height / 2 $line-height;
   }
 
   .right,
@@ -567,10 +627,17 @@ footer {
     }
 
     h2 {
+
       width: auto;
       margin-left: 0;
       margin-right: 0;
       font-weight: normal;
+      transform: none;
+
+      @media all and (max-width: $tablet) {
+        width: 100%;
+      }
+
     }
 
     a {
@@ -641,15 +708,28 @@ footer {
   p,
   h2,
   h3 {
+
+    font-family: $sans-stack;
     font-size: $font-size-small;
     line-height: $line-height;
     font-weight: normal;
     width: auto;
     text-align: center;
+
+    @media all and (max-width:$tablet) {
+      font-family: $serif-stack;
+    }
+
   }
 
   h2 {
+
     margin: 0;
+
+    a {
+      display: inline-block;
+    }
+
   }
 
   p {
@@ -660,7 +740,7 @@ footer {
 
     a {
       white-space: nowrap;
-      display: inline-block;
+      display: inline;
     }
 
   }
