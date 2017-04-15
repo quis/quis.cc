@@ -111,7 +111,7 @@ a:hover,
 a:active,
 a:focus {
   color: $highlight;
-  outline: 2px solid $highlight;
+  outline: 2px solid rgba($highlight, 0.9);
   transition: outline-offset 5s ease-in;
 }
 
