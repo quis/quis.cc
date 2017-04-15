@@ -162,10 +162,11 @@ nav {
   padding: 0 0 $line-height 0;
   width: $body-width;
   font-size: $font-size;
+  line-height: $line-height;
 
   @media all and (max-width: $tablet) {
     width: auto;
-    padding: 0 $line-height 20vh;
+    padding: 0 $font-size-small $line-height $font-size-small;
   }
 
   h2,
@@ -196,14 +197,26 @@ nav {
   }
 
   ul {
+
     margin: (-$line-height - 2) 0 0 ($font-size * 4);
+
+    @media all and (max-width: $tablet) {
+      margin-top: -$line-height + 3;
+    }
+
   }
 
   li {
+
     display: inline-block;
     margin: 0 $font-size ($font-size / 4) 0;
     list-style: none;
     white-space: nowrap;
+
+    @media all and (max-width: $mobile) {
+      display: block;
+    }
+
   }
 
   a,
@@ -256,7 +269,7 @@ footer {
   margin: $line-height * 4 0 $line-height * 2 0;
 
   @media all and (max-width:$tablet) {
-    margin: $line-height;
+    margin: $line-height 0;
   }
 
   .next-link a {
@@ -264,14 +277,15 @@ footer {
     display: block;
     font-size: $font-size;
     padding: $line-height;
+    margin: 0 0 $line-height 0;
     box-sizing: border-box;
     background: $highlight;
     color: #fff;
-    text-align: center;
+    text-align: right;
 
     @media all and (max-width:$tablet) {
       font-size: $font-size-small;
-      padding: $font-size;
+      margin: 0 $font-size-small $line-height $font-size-small;
     }
 
   }
@@ -303,6 +317,8 @@ footer {
 
     @media all and (max-width: $tablet) {
       width: auto;
+      margin-right: $font-size-small;
+      margin-left: $font-size-small;
     }
 
   }
@@ -313,8 +329,15 @@ footer {
   }
 
   p {
+
     margin: 0 auto;
     text-align: left;
+
+    @media all and (max-width: $tablet) {
+      margin-right: $font-size-small;
+      margin-left: $font-size-small;
+    }
+
   }
 
   p.center {
@@ -325,7 +348,7 @@ footer {
 
   p + p,
   ul + p {
-    margin-top: 1.618em;
+    margin-top: $line-height;
   }
 
   p.meta + p,
@@ -336,8 +359,7 @@ footer {
 
   p.meta {
 
-    margin-bottom: $font-size;
-    margin-top: $font-size / 2;
+    margin: $font-size / 2 auto $font-size auto;
 
     a {
       background: none;
@@ -350,19 +372,84 @@ footer {
   ul {
 
     padding: 0;
-    line-height: 1.62em;
+    line-height: $line-height;
     margin: 0 auto;
     width: $body-width;
 
     @media all and (max-width: 960px) {
       width: auto;
+      margin-right: $font-size-small;
+      margin-left: $font-size-small;
     }
 
   }
 
   li {
-    margin: 1.6em 0;
+
+    margin: $line-height / 2 0 0 0;
     text-align: left;
+
+    @media all and (max-width:$tablet) {
+      margin-left: 14px;
+    }
+
+  }
+
+  ul {
+
+    li {
+
+      list-style-type: none;
+      position: relative;
+
+      &:before {
+
+        content: "•";
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: -$font-size-small;
+        color: $highlight;
+        font-size: $font-size-small - 2;
+
+        @media all and (max-width:$tablet) {
+          left: -12px;
+        }
+
+      }
+
+    }
+
+  }
+
+  ol {
+
+    list-style-type: none;
+    counter-reset: item;
+
+    li {
+      counter-increment: item;
+      position: relative;
+    }
+
+    li:before {
+      content: counter(item) "";
+      color: $highlight;
+      position: absolute;
+      top: 2px;
+      left: -$font-size * 1.5;
+      font-size: $font-size-small;
+      text-align: right;
+      width: $font-size;
+
+      @media all and (max-width:$tablet) {
+        left: -30px;
+        font-size: 12.5px;
+        top: 1px;
+      }
+
+    }
+
   }
 
   a {
@@ -566,13 +653,16 @@ footer {
   }
 
   p {
+
     max-width: $body-width;
     margin-left: auto;
     margin-right: auto;
-  }
 
-  li a {
-    white-space: nowrap;
+    a {
+      white-space: nowrap;
+      display: inline-block;
+    }
+
   }
 
 }
