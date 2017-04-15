@@ -27,6 +27,15 @@ gulp.task('js', () => gulp
   .pipe(gulp.dest('js/'))
 );
 
-gulp.task('default',
+gulp.task('watchForChanges', function() {
+  gulp.watch('js/**/*', ['js']);
+  gulp.watch('css/**/*', ['sass']);
+});
+
+gulp.task('build',
   ['sass', 'js']
+);
+
+gulp.task('default',
+  ['build', 'watchForChanges']
 );
