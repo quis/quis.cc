@@ -70,7 +70,9 @@ var scrollPhotos = (function() { // Module pattern
         return self.to((current.top - self.topMargin), self.time / 2);
       }
 
-      return self.to((next.top - self.topMargin), self.time);
+      if (next) {
+        return self.to((next.top - self.topMargin), self.time);
+      }
 
     },
     inProgress: false,
