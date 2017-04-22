@@ -1,4 +1,6 @@
 all: generate deploy
+build-docker-image:
+	docker build -t wordpress-exif .
 stop:
 	docker-compose down
 wordpress: stop
