@@ -5,13 +5,13 @@
 		while (have_posts()) {
 			the_post();
 ?>
-		<div class="page">
+		<div class="blogPost">
 			<?php the_content(); ?>
 
 <?php
 			if (is_page("tags")) {
 ?>
-			<ul class="tags">
+			<ul class="tagList">
 				<?php
 					wp_list_categories(
 						array(
@@ -24,6 +24,7 @@
 					);
 				?>
 			</ul>
+			<ul class="tagList">
       <?php
         wp_get_archives(
           array(
@@ -31,6 +32,7 @@
           )
         );
       ?>
+			</ul>
 <?php
 			}
 ?>

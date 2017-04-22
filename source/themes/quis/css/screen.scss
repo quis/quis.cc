@@ -50,23 +50,6 @@ body {
 
 }
 
-.page {
-
-  margin: 0 0 4.9em 0;
-
-  .tags {
-    column-count: 3;
-    -moz-column-count: 3;
-  }
-
-  ul {
-    display: block;
-    margin: 0 0 0 1.4em;
-  }
-
-}
-
-
 h1, h2, h3, h4 {
   font-weight: normal;
 }
@@ -295,11 +278,7 @@ nav {
 .tagList .children {
   display: block;
   font-size: 1em;
-}
-
-.tagList ul {
-  font-size: 1em;
-  margin: 0 0 0 1em;
+  margin-left: $font-size * 3/4;
 }
 
 #infscr-loading {
