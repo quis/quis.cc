@@ -10,10 +10,10 @@
 
 					<p class="meta">
 						<?php makeDateLink(get_the_time("U")) ?>
-						&middot;
+						&ensp;
 	                    <?php
 	                        echo the_category_include(
-	                            " &middot; ",
+	                            " &ensp; ",
 	                            array(
 	                                "people",
 	                                "trip",

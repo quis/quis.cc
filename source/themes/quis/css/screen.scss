@@ -739,8 +739,13 @@ footer {
     margin-right: auto;
 
     a {
-      white-space: nowrap;
-      display: inline;
+
+      &.tag-link {
+        display: inline-block;
+        white-space: nowrap;
+        margin: 0 $font-size / 2 0 0;
+      }
+
     }
 
   }

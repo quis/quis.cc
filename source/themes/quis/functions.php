@@ -6,7 +6,7 @@
 		$linkDate = explode(" ", date("Y m d", $timestamp));
 ?>
 
-        <a href="/<?php echo $linkDate[0]?>/<?php echo $linkDate[1]?>/<?php echo $linkDate[2]?>"><?php echo $displayedDate[2]?></a>/<a href="/<?php echo $linkDate[0]?>/<?php echo $linkDate[1]?>"><?php echo $displayedDate[1]?></a>/<a href="/<?php echo $linkDate[0]?>"><?php echo $displayedDate[0]?></a>
+        <a href="/<?php echo $linkDate[0]?>&#8202;/&#8202;<?php echo $linkDate[1]?>&#8202;/&#8202;<?php echo $linkDate[2]?>"><?php echo $displayedDate[2]?></a>&#8202;/&#8202;<a href="/<?php echo $linkDate[0]?>/<?php echo $linkDate[1]?>"><?php echo $displayedDate[1]?></a>/<a href="/<?php echo $linkDate[0]?>"><?php echo $displayedDate[0]?></a>
 <?php
 
 	}
@@ -121,7 +121,7 @@
                 $parent = get_category($category->category_parent);
 
                 if ($parent->cat_name == $inc) {
-                    $output[] = '<a href="' . get_category_link($category->term_id) . '" title="View all posts tagged ' . $category->name . '">' . $category->name . '</a>';
+                    $output[] = '<a href="' . get_category_link($category->term_id) . '" class="tag-link" title="View all posts tagged ' . $category->name . '">' . $category->name . '</a>';
                 }
 
             }

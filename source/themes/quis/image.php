@@ -28,7 +28,6 @@
 		add_post_meta($currentImagePost, "imageWidth", $width, true);
 		add_post_meta($currentImagePost, "imageHeight", $height, true);
 		add_post_meta($currentImagePost, "imageEXIF", $exif, true);
-
 	}
 
 	list($timestamp, $focalLength, $aperture, $exposureTime, $ISO, $legacy) = explode(",", $exif);
@@ -67,7 +66,7 @@
                 <p>
                     <?php
                         echo the_category_include(
-                            "&emsp;",
+                            " ",
                             array(
                               "people",
                               "stunts",
@@ -80,8 +79,7 @@
 	if ($exif != "") {
     if ($legacy == "") {
 ?>
-                    &ensp;
-                    <time datetime="<?php echo date(DATE_W3C, $timestamp) ?>"><?php echo date("j", $timestamp)?>/<?php echo date("n", $timestamp)?>/<?php echo date("Y", $timestamp)?></time>
+                    <time datetime="<?php echo date(DATE_W3C, $timestamp) ?>"><?php echo date("j", $timestamp)?>&#8202;/&#8202;<?php echo date("n", $timestamp)?>&#8202;/&#8202;<?php echo date("Y", $timestamp)?></time>
 <?php
     }
 	}
