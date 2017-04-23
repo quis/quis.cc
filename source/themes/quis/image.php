@@ -1,7 +1,11 @@
 <?php
 
+  $publicImageBucket = "//images.quis.cc/";
+  $internalImageBucket = "https://images.quis.cc/";
+
   list($image, $notes) = explode("\n", get_the_content());
-  $image = "http://quisimages.s3.amazonaws.com/".trim($image).".jpg";
+  $filename = trim($image).".jpg";
+  $image = $internalImageBucket.$filename;
   $currentImagePost = get_the_ID();
 
   $cachedWidth = get_post_meta($currentImagePost, "imageWidth", true);
@@ -51,7 +55,7 @@
       >
 
         <img
-          src="<?php echo $image?>" width="<?php echo $width?>" height="<?php echo $height?>"
+          src="<?php echo $publicImageBucket ?><?php echo $filename ?>" width="<?php echo $width?>" height="<?php echo $height?>"
           alt="<?php echo ("" == get_the_title()) ? "Untitled" : get_the_title() ?>"
         />
 <?php

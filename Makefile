@@ -20,8 +20,10 @@ serve-static:
 	python3 -m http.server 5555
 deploy:
 	aws s3 sync --profile personal --region eu-west-1 ./static s3://quis.cc
+upload-images:
+	aws s3 sync --profile personal ./images s3://images.quis.cc
 backup-images:
-	aws s3 sync --profile personal s3://quisimages ./images
+	aws s3 sync --profile personal s3://images.quis.cc ./images
 dump-database:
 	$(eval DATETIME := $(shell echo $$(date +"%Y-%m-%d %H:%M")))
 	docker exec -it wordpressdocker_db_1 mysqldump -u wordpress -pwordpress wordpress > "./dumps/$(DATETIME).sql"
