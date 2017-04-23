@@ -58,15 +58,22 @@
           src="<?php echo $publicImageBucket ?><?php echo $filename ?>" width="<?php echo $width?>" height="<?php echo $height?>"
           alt="<?php echo ("" == get_the_title()) ? "Untitled" : get_the_title() ?>"
         />
+
+        <h2>
+            <a href="<?php echo $permalink ?>">
 <?php
-  if ("" != get_the_title()) {
+  if ("" == get_the_title()) {
 ?>
-                <h2>
-                    <a href="<?php echo $permalink ?>"><?php echo get_the_title() ?></a>
-                </h2>
+                Untitled
+<?php
+    } else {
+?>
+              <?php echo get_the_title() ?>
 <?php
     }
 ?>
+            </a>
+        </h2>
                 <p>
                     <?php
                         echo the_category_include(
