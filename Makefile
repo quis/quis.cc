@@ -16,8 +16,7 @@ postprocess:
 	find ./static -name "*.html" -print0 | xargs -0 sed -i'' -e 's/http:\/\/localhost:8000//g'
 generate: preprocess mirror postprocess
 serve-static:
-	cd ./static
-	python3 -m http.server 5555
+	cd ./static && python3 -m http.server 5555
 deploy:
 	aws s3 sync --profile personal --region eu-west-1 ./static s3://quis.cc
 upload-images:
