@@ -6,7 +6,7 @@
     $linkDate = explode(" ", date("Y m d", $timestamp));
 ?>
 
-        <a href="/<?php echo $linkDate[0]?>&#8202;/&#8202;<?php echo $linkDate[1]?>&#8202;/&#8202;<?php echo $linkDate[2]?>"><?php echo $displayedDate[2]?></a>&#8202;/&#8202;<a href="/<?php echo $linkDate[0]?>/<?php echo $linkDate[1]?>"><?php echo $displayedDate[1]?></a>/<a href="/<?php echo $linkDate[0]?>"><?php echo $displayedDate[0]?></a>
+        <a href="/<?php echo $linkDate[0]?>/<?php echo $linkDate[1]?>/<?php echo $linkDate[2]?>"><?php echo $displayedDate[2]?></a>&#8202;/&#8202;<a href="/<?php echo $linkDate[0]?>&#8202;/&#8202;<?php echo $linkDate[1]?>"><?php echo $displayedDate[1]?></a>&#8202;/&#8202;<a href="/<?php echo $linkDate[0]?>"><?php echo $displayedDate[0]?></a>
 <?php
 
   }
