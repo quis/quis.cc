@@ -542,6 +542,7 @@ footer {
 
     @media all and (max-width: $tablet) {
       font-size: $font-size-small;
+      width: auto;
     }
 
   }
