@@ -17,11 +17,16 @@ Tools for publishing [quis.cc](http://quis.cc).
 
 # Getting it running locally
 
-- `build-docker-image`
+- `make build-docker-image`
 - `make wordpress`
+- `make frontend`
 - Go to [http://localhost:8000](http://localhost:8000)
 - Under settings, select themes then activate the quis.cc theme
 
 # To generate the static mirror into `./static`
 
 - `make generate`
+
+# To see the static site locally
+
+- `make serve-static`
