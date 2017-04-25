@@ -5,6 +5,7 @@ $tablet: 800px;
 $mobile: 480px;
 $font-size: 23px;
 $font-size-small: 16px;
+$font-size-x-small: 14px;
 $line-height: 1.236 * $font-size;
 $easing: cubic-bezier(0.23, 1, 0.32, 1);
 $body-width: 30em;
@@ -697,7 +698,8 @@ footer {
     text-align: center;
 
     @media all and (max-width:$tablet) {
-      font-family: $serif-stack;
+      font-family: $sans-stack;
+      font-size: $font-size-x-small;
     }
 
   }
