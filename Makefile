@@ -12,6 +12,9 @@ preprocess:
 	rm -rf static/*
 mirror:
 	wget --mirror -p -nH --directory-prefix=static --level=1000 --html-extension -q --show-progress http://localhost:8000/
+mirror-frontend:
+	curl http://localhost:8000/wp-content/themes/quis/css/quis.css > ./static/wp-content/themes/quis/css/quis.css
+	curl http://localhost:8000/wp-content/themes/quis/js/quis.js > ./static/wp-content/themes/quis/js/quis.js
 postprocess:
 	echo "Removing index.html"
 	find ./static -name "*.html" -print0 | xargs -0 sed -i'' -e 's/index.html//g'
