@@ -1,10 +1,13 @@
 all: generate deploy
+
 build-docker-image:
 	docker build -t wordpress-exif .
 stop:
 	docker-compose down
 wordpress: stop
 	docker-compose up -d
+frontend:
+	cd ./source/themes/quis/ && npm start
 preprocess:
 	rm -rf static/*
 mirror:
