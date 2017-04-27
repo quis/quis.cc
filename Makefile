@@ -23,6 +23,9 @@ postprocess:
 generate: preprocess mirror postprocess
 serve-static:
 	cd ./static && python3 -m http.server 5555
+other-files:
+	cp ./source/favicon.ico ./static/
+	cp ./source/keybase.txt ./static/
 deploy:
 	aws s3 sync --profile personal --region eu-west-1 ./static s3://quis.cc
 upload-images:

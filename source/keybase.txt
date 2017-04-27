@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/quis
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://quis.cc
+  * I am quis (https://keybase.io/quis) on keybase.
+  * I have a public key ASC5Opm_BHr7cnGGsnUX2gcmFHwEcTAr-vZnv40UaIJCHQo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0120b93a99bf047afb727186b27517da0726147c0471302bfaf667bf8d146882421d0a",
+            "host": "keybase.io",
+            "kid": "0120b93a99bf047afb727186b27517da0726147c0471302bfaf667bf8d146882421d0a",
+            "uid": "bac53a2cdcbf0a3d8fc1b1e573e81619",
+            "username": "quis"
+        },
+        "service": {
+            "hostname": "quis.cc",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.21"
+    },
+    "ctime": 1493307973,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1493307938,
+        "hash": "5d1f7ee643bfa3c36c5ca9fdadf3c1ffb8c3a6de77392c33581205e0e74d05f54f5bf014d840d783c58c568eac84765500348df4848eca2d4892261ea020f98c",
+        "seqno": 1041799
+    },
+    "prev": "2b205be302044d90a7f0995ef135f4be5d1fa5a90b985ba6f2e4e2bee282d718",
+    "seqno": 10,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEguTqZvwR6+3JxhrJ1F9oHJhR8BHEwK/r2Z7+NFGiCQh0Kp3BheWxvYWTFAu17ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwYjkzYTk5YmYwNDdhZmI3MjcxODZiMjc1MTdkYTA3MjYxNDdjMDQ3MTMwMmJmYWY2NjdiZjhkMTQ2ODgyNDIxZDBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwYjkzYTk5YmYwNDdhZmI3MjcxODZiMjc1MTdkYTA3MjYxNDdjMDQ3MTMwMmJmYWY2NjdiZjhkMTQ2ODgyNDIxZDBhIiwidWlkIjoiYmFjNTNhMmNkY2JmMGEzZDhmYzFiMWU1NzNlODE2MTkiLCJ1c2VybmFtZSI6InF1aXMifSwic2VydmljZSI6eyJob3N0bmFtZSI6InF1aXMuY2MiLCJwcm90b2NvbCI6Imh0dHBzOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4yMSJ9LCJjdGltZSI6MTQ5MzMwNzk3MywiZXhwaXJlX2luIjo1MDQ1NzYwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDkzMzA3OTM4LCJoYXNoIjoiNWQxZjdlZTY0M2JmYTNjMzZjNWNhOWZkYWRmM2MxZmZiOGMzYTZkZTc3MzkyYzMzNTgxMjA1ZTBlNzRkMDVmNTRmNWJmMDE0ZDg0MGQ3ODNjNThjNTY4ZWFjODQ3NjU1MDAzNDhkZjQ4NDhlY2EyZDQ4OTIyNjFlYTAyMGY5OGMiLCJzZXFubyI6MTA0MTc5OX0sInByZXYiOiIyYjIwNWJlMzAyMDQ0ZDkwYTdmMDk5NWVmMTM1ZjRiZTVkMWZhNWE5MGI5ODViYTZmMmU0ZTJiZWUyODJkNzE4Iiwic2Vxbm8iOjEwLCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQKuULG1FKQs0Jt70CElCRNF3GiTrV/Nr7WL8xnJqkIqjyHXYu1i28miCOadQ3jsLS56RHLDu9RAuS4rnkpsGEg+oc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCCvX7sTvpqke+FE1MB0AXwt/337dB0Nhm38RBWkWTPHAaN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/quis
+
+==================================================================
