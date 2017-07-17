@@ -28,6 +28,24 @@
       <?php
         wp_get_archives(
           array(
+            "type" => "yearly"
+          )
+        );
+      ?>
+      </ul>
+      <ul class="tagList">
+      <?php
+        wp_get_archives(
+          array(
+            "type" => "monthly"
+          )
+        );
+      ?>
+      </ul>
+      <ul class="tagList">
+      <?php
+        wp_get_archives(
+          array(
             "type" => "daily"
           )
         );
