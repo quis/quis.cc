@@ -3,6 +3,7 @@
     Trips
   </h3>
   <ul>
+    <li><a href="/trips/portugal-2017/">Portugal 2017</a></li>
     <li><a href="/trips/les-arcs-2017/">Les Arcs 2017</a></li>
     <li><a href="/trips/barcelona-2016/">Barcelona 2016</a></li>
     <li><a href="/trips/portugal-2016/">Portugal 2016</a></li>
