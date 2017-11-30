@@ -29,7 +29,7 @@ other-files:
 deploy:
 	aws s3 sync --profile personal --region eu-west-1 ./static s3://quis.cc
 upload-images:
-	aws s3 sync --profile personal ./images s3://images.quis.cc
+	aws s3 sync --profile personal --region eu-west-1 ./images s3://images.quis.cc
 backup-images:
 	aws s3 sync --profile personal s3://images.quis.cc ./images
 dump-database:
