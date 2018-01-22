@@ -57,8 +57,8 @@ h1, h2, h3, h4 {
 
 h1 {
 
-  font-family: $sans-stack;
-  font-weight: bold;
+  font-family: $serif-stack;
+  font-weight: normal;
   font-size: $font-size;
   line-height: $line-height;
 
@@ -283,18 +283,18 @@ nav {
 }
 
 #infscr-loading {
-  position: fixed;
-  bottom: $font-size-small;
-  left: $font-size-small;
   z-index: 98;
   padding: 0;
+  margin: 0 auto;
+  position: relative;
+  top: $line-height;
   background: transparent;
-  height: 1em;
-  width: 1em;
-  border-left: 5px solid rgba($highlight, 0.2);
-  border-right: 5px solid rgba($highlight, 1);
-  border-bottom: 5px solid rgba($highlight, 1);
-  border-top: 5px solid rgba($highlight, 1);
+  height: $line-height;
+  width: $line-height;
+  border-left: 8px solid rgba($highlight, 0.8);
+  border-right: 8px solid rgba($highlight, 1);
+  border-bottom: 10px solid rgba($highlight, 0.9);
+  border-top: 10px solid rgba($highlight, 0.9);
   border-radius: 100%;
   -webkit-animation: pulse 1.2s linear;
   -moz-animation: pulse 1.2s linear;
@@ -532,7 +532,7 @@ footer {
 
     font-family: $sans-stack;
     font-size: $font-size;
-    transform: scaleX(0.909);
+    transform: scaleX(1.05);
     transform-origin: left;
     text-transform: none;
     text-align: left;
@@ -573,6 +573,7 @@ footer {
     text-indent: 0;
     width: 50%;
     font-family: $sans-stack;
+    transform: scaleX(0.97);
   }
 
   .left {
@@ -685,6 +686,7 @@ footer {
 
   margin-top: $line-height * 2;
   line-height: $line-height;
+  transform: scaleX(0.97);
 
   p,
   h2,
