@@ -37,4 +37,6 @@ dump-database:
 	docker exec -it wordpressdocker_db_1 mysqldump -u wordpress -pwordpress wordpress > "./dumps/$(DATETIME).sql"
 sync-database-dumps:
 	aws s3 sync --profile personal ./dumps s3://quisdbbackups
+pull-database-dumps:
+	aws s3 sync --profile personal s3://quisdbbackups ./dumps
 backup-database: dump-database sync-database-dumps
