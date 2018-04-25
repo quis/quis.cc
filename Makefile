@@ -35,6 +35,8 @@ backup-images:
 dump-database:
 	$(eval DATETIME := $(shell echo $$(date +"%Y-%m-%d %H:%M")))
 	docker exec -it wordpressdocker_db_1 mysqldump -u wordpress -pwordpress wordpress > "./dumps/$(DATETIME).sql"
+import-database:
+	docker exec -i wordpressdocker_db_1 mysql -u wordpress -pwordpress wordpress < $(dump)
 sync-database-dumps:
 	aws s3 sync --profile personal ./dumps s3://quisdbbackups
 pull-database-dumps:
