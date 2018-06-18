@@ -3,6 +3,7 @@
     Trips
   </h3>
   <ul>
+    <li><a href="/trips/north-america-2018/">North America 2018</a></li>
     <li><a href="/trips/innsbruck-2018/">Innsbruck 2018</a></li>
     <li><a href="/trips/switzerland-2017/">Switzerland 2017</a></li>
     <li><a href="/trips/portugal-2017/">Portugal 2017</a></li>
