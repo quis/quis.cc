@@ -19,7 +19,7 @@
               "title_li"          => __(""),
               "show_count"        => 1,
               "depth"             => 0,
-              "exclude"           => "1,7"
+              "exclude"           => "1,7,11,148"
             )
           );
         ?>
