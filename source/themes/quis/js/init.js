@@ -35,11 +35,6 @@ $(function() {
 
             QUIS.map.renderMap();
 
-            if (_gaq) {
-              // Notify Google Analytics of page view
-              _gaq.push(['_trackPageview', path]);
-            }
-
           }
         }
       );
