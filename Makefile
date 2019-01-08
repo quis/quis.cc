@@ -20,7 +20,7 @@ postprocess:
 	find ./static -name "*.html" -print0 | xargs -0 sed -i'' -e 's/index.html//g'
 	echo "Removing hostname"
 	find ./static -name "*.html" -print0 | xargs -0 sed -i'' -e 's/http:\/\/localhost:8000//g'
-generate: preprocess mirror postprocess
+generate: preprocess other-files mirror postprocess
 serve-static:
 	cd ./static && python3 -m http.server 5555
 other-files:
