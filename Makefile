@@ -1,4 +1,4 @@
-all: generate deploy
+all: upload-images generate deploy
 
 build-docker-image:
 	docker build -t wordpress-exif .
