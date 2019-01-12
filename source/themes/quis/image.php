@@ -29,9 +29,13 @@
 
     list($width, $height) = getimagesize($image);
     $exif = getExif($image);
-    add_post_meta($currentImagePost, "imageWidth", $width, true);
-    add_post_meta($currentImagePost, "imageHeight", $height, true);
-    add_post_meta($currentImagePost, "imageEXIF", $exif, true);
+
+    if ($width && $height) {
+      add_post_meta($currentImagePost, "imageWidth", $width, true);
+      add_post_meta($currentImagePost, "imageHeight", $height, true);
+      add_post_meta($currentImagePost, "imageEXIF", $exif, true);
+    }
+
   }
 
   list($timestamp, $focalLength, $aperture, $exposureTime, $ISO, $legacy) = explode(",", $exif);
