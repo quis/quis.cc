@@ -3,7 +3,7 @@
     Trips
   </h3>
   <ul>
-    <li><a href="/2019/01/29/ice-climbing-2019/">Ice climbing 2019</a></li>
+    <li><a href="/trips/alps-2019/">Alps 2019</a></li>
     <li><a href="/trips/california-2018/">California 2018</a></li>
     <li><a href="/trips/salzburg-2018/">Salzburg 2018</a></li>
     <li><a href="/trips/north-america-2018/">North America 2018</a></li>
