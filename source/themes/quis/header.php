@@ -15,9 +15,6 @@
     <link rel="alternate" type="application/rss+xml" title="quis.cc RSS feed" href="/feed/">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <meta name="description" content="<?php echo $pageMeta["description"]?>" />
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
   </head>
   <body>
     <header>
