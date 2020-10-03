@@ -57,11 +57,19 @@
         class="hasTooltip mask<?php echo $parentPost ? "" : " unit";?><?php echo "" == $routeTo ? "" : " onMap";?><?php echo $imgClass?>"
         id="post-<?php echo get_the_ID() ?>"
       >
+<?php
+  global $is_first_image
+?>
 
         <img
           src="<?php echo $publicImageBucket ?><?php echo $filename ?>" width="<?php echo $width?>" height="<?php echo $height?>"
           alt="<?php echo ("" == get_the_title()) ? "Untitled" : get_the_title() ?>"
+          loading="<?php echo $is_first_image == true ? "eager" : "lazy" ?>"
         />
+
+<?php
+  $is_first_image = false;
+?>
 
         <h2>
             <a href="<?php echo $permalink ?>">

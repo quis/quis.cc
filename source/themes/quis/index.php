@@ -9,6 +9,8 @@
 
   is_front_page() && !is_paged() ? require("nav.php") : null;
 
+  $is_first_image = true;
+
   if (have_posts()) {
 
     while (have_posts()) {
