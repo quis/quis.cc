@@ -3,6 +3,7 @@
     Trips
   </h3>
   <ul>
+    <li><a href="/trips/france-2022/">France 2022</a></li>
     <li><a href="/trips/scotland-2020/">Scotland 2020</a></li>
     <li><a href="/trips/canada-2019/">Canada 2019</a></li>
     <li><a href="/trips/alps-2019/">Alps 2019</a></li>
