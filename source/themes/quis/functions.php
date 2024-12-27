@@ -17,13 +17,7 @@
 
     if (!function_exists("exif_read_data")) return "";
 
-    $exif = exif_read_data($img);
-
-    while (list($key,$value) = each($exif)) {
-
-      $picture[$key] = $value;
-
-    }
+    $picture = exif_read_data($img);
 
     if ($picture["ExposureTime"]) {
 
