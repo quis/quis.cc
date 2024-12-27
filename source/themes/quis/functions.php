@@ -19,7 +19,7 @@
 
     $picture = exif_read_data($img);
 
-    if ($picture["ExposureTime"]) {
+    if ($picture["ExposureTime"] && $picture["DateTimeOriginal"]) {
 
       // Date
       $longdate = explode(" ", $picture["DateTimeOriginal"]);
