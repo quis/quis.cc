@@ -27,6 +27,7 @@ serve-static:
 other-files:
 	cp ./source/favicon.ico ./static/
 	cp ./source/keybase.txt ./static/
+	cp -r ./source/.well-known ./static/
 deploy:
 	aws s3 sync --profile personal --region eu-west-1 ./static s3://quis.cc
 upload-images:
