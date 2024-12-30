@@ -9,7 +9,8 @@ wordpress: stop
 frontend:
 	cd ./source/themes/quis/ && npm start
 preprocess:
-	rm -rf static/*
+	rm -rf static
+	mkdir static
 mirror:
 	wget --mirror -p -nH --directory-prefix=static --level=1000 --html-extension -q --show-progress http://localhost:8000/
 mirror-frontend:
