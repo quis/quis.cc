@@ -3,6 +3,8 @@
     Trips
   </h3>
   <ul>
+    <li><a href="/trips/kalymnos-2023/">Kalymnos 2023</a></li>
+    <li><a href="/2023/08/02/5-ranges-round/">5 ranges round</a></li>
     <li><a href="/trips/france-2022/">France 2022</a></li>
     <li><a href="/trips/scotland-2020/">Scotland 2020</a></li>
     <li><a href="/trips/canada-2019/">Canada 2019</a></li>
