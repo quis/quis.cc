@@ -58,6 +58,6 @@
 ?>
     </ul>
     <p>
-      Send emails to <a href="mailto:me@quis.cc">me@quis.cc</a> or contact <a href="//twitter.com/quis">@quis</a> on Twitter
+      Send emails to <a href="mailto:me@quis.cc">me@quis.cc</a> or follow <a href="//bsky.app/profile/quis.cc">@quis.cc</a> on Bluesky
     </p>
 </nav>
