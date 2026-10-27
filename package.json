@@ -1,0 +1,14 @@
+{
+  "name": "quis.cc",
+  "version": "0.0.1",
+  "description": "Tools for building frontend of quis.cc",
+  "homepage": "https://github.com/quis/quis.cc#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quis/quis.cc.git"
+  },
+  "dependencies": {
+    "sass-embedded": "^1.106.1",
+    "uglify-js": "^3.19.3"
+  }
+}

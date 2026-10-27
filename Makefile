@@ -6,8 +6,9 @@ stop:
 	docker-compose down
 wordpress: stop
 	docker-compose up -d
-frontend:
-	cd ./source/themes/quis/ && npm start
+frontend-dependencies:
+	npm ci
+frontend: frontend-dependencies js css
 preprocess:
 	rm -rf static
 	mkdir static
@@ -44,3 +45,28 @@ sync-database-dumps:
 pull-database-dumps:
 	aws s3 sync --profile personal s3://quisdbbackups ./dumps
 backup-database: dump-database sync-database-dumps
+
+JS_FILES_TO_BUILD = source/themes/quis/js/combined.js
+CSS_FILES_TO_BUILD = source/themes/quis/css/quis.css
+
+# JS dependency list
+source/themes/quis/js/combined.js =\
+ source/themes/quis/js/constants.js\
+ source/themes/quis/js/rateLimit.js\
+ source/themes/quis/js/scrollPages.js\
+ source/themes/quis/js/scrollPhotos.js\
+ source/themes/quis/js/jquery.infinitescroll.js\
+ source/themes/quis/js/jquery.viewportSelector.js\
+ source/themes/quis/js/map.js\
+ source/themes/quis/js/init.js
+
+js: ${JS_FILES_TO_BUILD}
+
+.SECONDEXPANSION:
+${JS_FILES_TO_BUILD}: %: $$(%)
+	cat $^ >$@	
+	uglifyjs $@ > source/themes/quis/js/quis.js
+	rm source/themes/quis/js/combined.js
+
+css:
+	sass --style=compressed --no-source-map source/themes/quis/css/quis.scss ${CSS_FILES_TO_BUILD}
