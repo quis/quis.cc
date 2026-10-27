@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $grey: rgb(25, 24, 24);
 $highlight: rgb(247, 57, 9);
 $background: #fff;
@@ -234,7 +236,7 @@ nav {
   }
 
   h3 {
-    margin: $line-height / 2 0 0 0;
+    margin: math.div($line-height, 2) 0 0 0;
   }
 
   p {
@@ -254,7 +256,7 @@ nav {
   li {
 
     display: inline-block;
-    margin: 0 $font-size ($font-size / 4) 0;
+    margin: 0 $font-size math.div($font-size, 4) 0;
     list-style: none;
     white-space: nowrap;
 
@@ -279,7 +281,7 @@ nav {
 .tagList .children {
   display: block;
   font-size: 1em;
-  margin-left: $font-size * 3/4;
+  margin-left: math.div($font-size * 3, 4);
 }
 
 #infscr-loading {
@@ -400,7 +402,7 @@ footer {
 
   p.meta {
 
-    margin: $font-size / 2 auto $font-size auto;
+    margin: math.div($font-size, 2) auto $font-size auto;
 
     a {
       background: none;
@@ -427,7 +429,7 @@ footer {
 
   li {
 
-    margin: $line-height / 2 0 0 0;
+    margin: math.div($line-height, 2) 0 0 0;
     text-align: left;
 
     @media all and (max-width:$tablet) {
@@ -578,12 +580,12 @@ footer {
 
   .left {
     float: left;
-    margin: $line-height / 2 $line-height $line-height / 2 0;
+    margin: math.div($line-height, 2) $line-height math.div($line-height, 2) 0;
   }
 
   .right {
     float: right;
-    margin: $line-height / 2 0 $line-height / 2 $line-height;
+    margin: math.div($line-height, 2) 0 math.div($line-height, 2) $line-height;
   }
 
   .right,
@@ -727,7 +729,7 @@ footer {
       &.tag-link {
         display: inline-block;
         white-space: nowrap;
-        margin: 0 $font-size / 2 0 0;
+        margin: 0 math.div($font-size, 2) 0 0;
 
         &:last-child {
           margin-right: 0;
