@@ -19,9 +19,10 @@ Tools for publishing [quis.cc](http://quis.cc).
 
 - `make build-docker-image`
 - `make wordpress`
+- `make pull-images pull-database-dumps` (requires AWS credentials)
+- `dump="2000-00-00\\ 00:00.sql" make import-database` (replace with latest `.sql` file as appropriate)
 - `make frontend`
 - Go to [http://localhost:8000](http://localhost:8000)
-- Under settings, select themes then activate the quis.cc theme
 
 # To generate the static mirror into `./static`
 

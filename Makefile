@@ -32,13 +32,13 @@ deploy:
 	aws s3 sync --profile personal --region eu-west-1 ./static s3://quis.cc
 upload-images:
 	aws s3 sync --profile personal --region eu-west-1 ./images s3://images.quis.cc
-backup-images:
+pull-images:
 	aws s3 sync --profile personal s3://images.quis.cc ./images
 dump-database:
 	$(eval DATETIME := $(shell echo $$(date +"%Y-%m-%d %H:%M")))
-	docker exec -it quiscc_db_1 mysqldump -u wordpress -pwordpress wordpress > "./dumps/$(DATETIME).sql"
+	docker exec -it quiscc-db-1 mysqldump -u wordpress -pwordpress wordpress > "./dumps/$(DATETIME).sql"
 import-database:
-	docker exec -i quiscc_db_1 mysql -u wordpress -pwordpress wordpress < $(dump)
+	docker exec -i quiscc-db-1 mysql -u wordpress -pwordpress wordpress < $(dump)
 sync-database-dumps:
 	aws s3 sync --profile personal ./dumps s3://quisdbbackups
 pull-database-dumps:
