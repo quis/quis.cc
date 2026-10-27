@@ -25,4 +25,4 @@ jobs:
     - name: Build frontend
       working-directory: ./
       run: |
-        make css js
+        make frontend
